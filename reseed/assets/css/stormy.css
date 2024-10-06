@@ -1,0 +1,244 @@
+@font-face {font-family: Karla; font-weight: 200 300 400 500 600 700 800; font-style: normal; font-display: swap; src: url(../fonts/karla.woff2) format("woff2")}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: #174667;
+  background: #101b31;
+  color: #fff;
+  text-shadow: none;
+}
+
+html {
+  background: #020213;
+}
+
+body {
+  margin: 0;
+  background: repeating-linear-gradient(to bottom, rgba(0,0,16,.8) 2px, rgba(0,0,0,0) 4px), repeating-linear-gradient(to right, rgba(0,0,32,.8) 2px, rgba(0,0,0,0) 4px), url(../images/cloud.webp) no-repeat center center / cover, url(../images/cloud_lowres.webp) no-repeat center center / cover, #020213;
+  color: #dde;
+  font-family: Karla, Open Sans, Segoe UI, sans-serif;
+  font-size: 14pt;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+a:link,
+a:visited {
+  color: #1397de;
+  text-decoration: none;
+  outline: none;
+  font-weight: 600;
+}
+
+a:hover,
+a:active {
+  color: #3cb7ff;
+}
+
+img {
+  display: inline-block;
+}
+
+header, footer, img {
+  user-select: none;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  padding: 10px 10px 4px;
+  background: /*url(../images/textlogo.png) no-repeat 10px center / auto 32px*/ #000;
+  border-bottom: 2px solid #14476c;
+  animation: down .5s ease .8s both;
+}
+
+header a {
+  font-weight: 700 !important;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  justify-content: right;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 8px;
+}
+
+header li {
+  line-height: 1.6;
+  margin: 0 10px;
+}
+
+#homelink {
+  margin-top: -2px;
+  float: left;
+}
+
+#homelink img {
+  line-height: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 75%;
+  padding: 3px 0 5px;
+  border-top: 2px solid #14476c;
+  background: #000;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: 700;
+  animation: up .5s ease .8s both;
+}
+
+.container,
+.credits {
+  width: 100%;
+}
+
+.container {
+  padding: 3.5% 5%;
+  margin: 0 auto;
+  max-width: 1300px;
+  min-height: calc(100vh - 60px);
+}
+
+.inner {
+  background: #16517a;
+  background: linear-gradient(to bottom, rgba(22,81,122,.85), rgba(15,56,87,.85));
+  width: 80%;
+  margin: 2.5% auto 3.5%;
+  padding: 15px 40px 40px;
+  border-radius: 8px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+  box-shadow: 0 0 0 3px #04061f, inset 0 0 0 1px rgba(255,255,255,.5);
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  margin: 2.5% auto 0;
+  text-align: center;
+}
+
+.logo img {
+  filter: drop-shadow(0 0 1px #000) drop-shadow(0 0 5px #000);
+  width: 170px;
+}
+
+.inner h1 {
+  margin: 5px 0 15px;
+  font-size: 180%;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.6), 2px 2px 2px rgba(0,0,0,.4);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.center {
+ text-align: center;
+}
+
+p:last-child {
+  margin: 0;
+}
+
+.inner ul {
+  margin-top: 0;
+}
+
+.inner li {
+  margin-left: 10%;
+}
+
+.inner p {
+  line-height: 1.5;
+}
+
+.inner .address {
+  color: #dd0;
+  user-select: all;
+  display: inline-block;
+}
+
+#projects {
+  width: 100%;
+  margin: 25px auto 0;
+}
+
+#projects td {
+  text-align: center;
+  font-weight: 700;
+  font-size: 80%;
+}
+
+#projects .label {
+  background: #090f1f;
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 15px;
+  line-height: 1.2;
+}
+
+hr {
+  box-sizing: content-box;
+  margin: 30px 0;
+  padding: 0;
+  height: 0;
+  border: none;
+  border-top: 1px solid #020418;
+  border-bottom: 1px solid #667;
+  text-align: center;
+  opacity: .7;
+}
+
+@keyframes up {
+  from {transform: translateY(120px)}
+  to {transform: translateY(0)}
+}
+
+@keyframes down {
+  from {transform: translateY(-120px)}
+  to {transform: translateY(0)}
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 12pt;
+  }
+  .inner {
+    width: 95%;
+  }
+  p, .inner li {
+    line-height: 1.35;
+  }
+  .inner li {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  .logo img {
+    width: 130px;
+  }
+}
