@@ -1,0 +1,54 @@
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css)$">
+    Header set Cache-Control "max-age=2592000, public"
+  </FilesMatch>
+</IfModule>
+
+Header add Content-Security-Policy "upgrade-insecure-requests"
+
+RewriteOptions inherit
+
+RewriteEngine on
+
+# Enable mod_expires
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Set default expiration time
+  ExpiresDefault "access plus 1 month"
+
+  # Set expiration time for specific file types
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^stormycloud\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.stormycloud\.org$
+RewriteRule ^/?$ "https\:\/\/stormycloud\.org\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^stormycloud\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.stormycloud\.org$
+RewriteRule ^about\-us\/$ "https\:\/\/stormycloud\.org\/mission\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^stormycloud\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.stormycloud\.org$
+RewriteRule ^crypto\/$ "https\:\/\/stormycloud\.org\/cryptocurrency\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^stormycloud\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.stormycloud\.org$
+RewriteRule ^install\-i2pplus\/$ "https\:\/\/stormycloud\.org\/install\-i2p\/" [R=301,L]
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/css application/javascript application/javascript text/html text/plain text/xml
+</IfModule>
+RewriteCond %{HTTP_HOST} ^stormycloud\.org$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.stormycloud\.org$
+RewriteRule ^2022\/10\/12\/install\-i2p\-router\-installation\/$ "https\:\/\/stormycloud\.org\/install\-i2p\/" [R=301,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php74” package as the default “PHP” programming language.
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php74 .php .php7 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit

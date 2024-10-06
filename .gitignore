@@ -1,3 +1,8 @@
 .vscode/*
 .vscode/
 *.json
+billing/
+shop/
+blog/
+whmcs/
+reseed/
