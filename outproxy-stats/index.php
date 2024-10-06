@@ -24,7 +24,7 @@
       <div class="page-title" style="background-image: url('../assets/images/outproxy-title.webp');">
         <h1>I2P Outproxy Stats</h1>
       </div>
-      <center><h2 class="line-short">OutProxy HTTP Request Statistic's</h2>  </center>
+      <center><h2 class="line-short">OutProxy HTTP Request Statistics</h2>  </center>
       <div class="stats-container">
         <div class="stats-row">
           <div class="stats-item">
@@ -39,7 +39,7 @@
           </div>
         </div>
   <!-- Second Row: 2x1 Grid -->
-  <h2 class="line-short">OutProxy Network Statistic's</h2>  
+  <h2 class="line-short">OutProxy Network Statistics</h2>  
 
   <div class="stats-row">
     <div class="stats-item">
