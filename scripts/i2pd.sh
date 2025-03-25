@@ -1,4 +1,7 @@
 #!/bin/bash
+# This script is used to configure i2pd to use an outproxy
+# for HTTP requests. It will add the outproxy line to the
+# httpproxy block in the i2pd configuration file.
 
 config_file="/etc/i2pd/i2pd.conf"
 block_name="httpproxy"
