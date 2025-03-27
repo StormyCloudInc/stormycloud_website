@@ -9,8 +9,7 @@
   <link rel=icon href=../assets/images/favicon.png type=image/png>
   <link rel="canonical" href="https://stormycloud.org/donate/" />
 
-                <script  async  src="https://widgets.givebutter.com/latest.umd.cjs?acct=KYuW620gdbglriQv&p=other"
-></script>
+                <script  async  src="https://widgets.givebutter.com/latest.umd.cjs?acct=KYuW620gdbglriQv&p=other"></script>
 <meta name="description" content="Support digital privacy with secure donations. We accept cryptocurrencies and traditional methods to defend online civil liberties." />
 <style>
 .custom-heading {
@@ -113,7 +112,6 @@
             el.dataset.initialized = true;
         }
     });
-    
     function handlePriceInput(event) {
         event.preventDefault();
         const root = event.target.closest('.btcpay-form');
