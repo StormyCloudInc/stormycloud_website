@@ -39,6 +39,7 @@
     <div class="dns-section">
       <h3 class="line-short">DNS-over-HTTPS</h3>
       <p>https://dns.stormycloud.org/dns-query</p>
+      <p>https://dns2.stormycloud.org/dns-query</p>
       
 </div>
     <div class="dns-section">
@@ -49,6 +50,7 @@
     <div class="dns-section">
       <h3 class="line-short">DNS-over-TLS</h3>
       <p>&#10148; dns.stormycloud.org:853</p>
+      <p>&#10148; dns2.stormycloud.org:853</p>
     </div>
 
 

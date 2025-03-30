@@ -56,7 +56,7 @@
 </div>
 <p>
 <div>
-    <b>Tor Onion Address:</b> iebyo5djm35np6q2r3tcs3jwszxelgk6pq6pic662pn7q7kifxrsnead.onion:18089
+    <b>Tor Onion Address:</b> a6orjo6aiotog3njppja5jwnd3rexzfjiejxnojvw74p3kma45fundid.onion:18089
 </div>
     </div>
 
