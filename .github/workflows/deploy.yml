@@ -1,0 +1,34 @@
+name: Deploy to I2P Server
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy-i2p:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        submodules: true
+        fetch-depth: 0
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+
+    - name: Build Hugo site
+      run: hugo --minify
+
+    - name: Deploy to I2P Server
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: ${{ secrets.I2P_SERVER_IP }}
+        username: ${{ secrets.I2P_SERVER_USER }}
+        key: ${{ secrets.I2P_SERVER_SSH_KEY }}
+        port: ${{ secrets.I2P_SERVER_PORT }}
+        source: "public/*"
+        target: "/var/www/html/"
+        strip_components: 1
