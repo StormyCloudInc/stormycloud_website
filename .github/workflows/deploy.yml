@@ -20,7 +20,7 @@ jobs:
         extended: true
 
     - name: Build Hugo site
-      run: hugo --minify
+      run: hugo --config="config/config.toml" --gc --minify
 
     - name: Deploy to I2P Server
       uses: appleboy/scp-action@v0.1.4
